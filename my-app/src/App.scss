@@ -1,0 +1,11 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "ChoiseOfStep.scss";
+
+.navbar {
+  background-color: $indigo-900;
+};
+
+.navbar-text {
+  color    : $yellow-700;
+  font-size: large;
+};
