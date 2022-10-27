@@ -4,11 +4,11 @@ import { Button } from "react-bootstrap";
 function ChoiseOfStep(props) {
 
   function onClickChangeEntrance() {
-    props.onClickChangeEntrance();
+    props.onChangeEntrance();
   };
 
   function onClickChangeRerording() {
-    props.onClickChangeRerording();
+    props.onChangeRecording();
   };
 
   return (
