@@ -15,9 +15,9 @@ function FunctionalConteiner() {
         SetIsRecording(!isRecording);
     };
 
-    useEffect(() => {
-        SetIsChoice(!isChoice);
-    }, [isChoice]);
+    // useEffect(() => {
+    //     SetIsChoice(!isChoice);
+    // }, [isChoice]);
 
     if (isChoice) {
         return (
@@ -26,7 +26,7 @@ function FunctionalConteiner() {
                 onChangeRecording={isRecordingChoice}
             />
         );
-    }
+    };
 };
 
 export default FunctionalConteiner;
