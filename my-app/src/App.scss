@@ -1,11 +1,17 @@
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
-@import "ChoiseOfStep.scss";
+@import "ChoiseOfStep";
 
 .navbar {
   background-color: $indigo-900;
 };
 
 .navbar-text {
-  color    : $yellow-700;
-  font-size: large;
+  color    : $yellow-500;
+  font-size: small;
+};
+
+@include media-breakpoint-up(lg){
+  .navbar-text {
+    color    : $yellow-500;
+    font-size: large;
+  };
 };

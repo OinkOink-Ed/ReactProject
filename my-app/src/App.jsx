@@ -11,6 +11,11 @@ function App() {
         </Container>
       </Navbar>
       <ChoiseOfStep/>
+      <Navbar fixed = "bottom" expand = "lg">
+        <Container className="d-flex justify-content-center">
+          <Navbar.Text className="text-center">По вопросам предложений и улучшений обращаться по номеру: 8-952-836-06-42</Navbar.Text>
+        </Container>
+      </Navbar>
     </>
   );
 }
