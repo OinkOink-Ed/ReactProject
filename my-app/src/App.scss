@@ -2,16 +2,16 @@
 
 .navbar {
   background-color: $indigo-900;
-};
+}
 
 .navbar-text {
-  color    : $yellow-500;
+  color: $yellow-500;
   font-size: small;
-};
+}
 
-@include media-breakpoint-up(lg){
+@include media-breakpoint-up(lg) {
   .navbar-text {
-    color    : $yellow-500;
+    color: $yellow-500;
     font-size: large;
-  };
-};
+  }
+}
