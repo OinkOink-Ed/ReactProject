@@ -1,4 +1,3 @@
-import "./ChoiseOfStep.scss";
 import { Button } from "react-bootstrap";
 
 function ChoiseOfStep(props) {

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ChoiseOfStep from "./ChoiseOfStep";
+import AdminEntriesForm from "./AdminEntriesForm";
 
 function FunctionalConteiner() {
     const [isEntrance, SetIsEntrance] = useState(false);
@@ -24,9 +25,7 @@ function FunctionalConteiner() {
 
     if (isEntrance) {
         return (
-            <div>
-                Это форма для входа
-            </div>
+            <AdminEntriesForm />
         );
     };
 
