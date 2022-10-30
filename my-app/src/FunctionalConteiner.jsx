@@ -16,12 +16,10 @@ function FunctionalConteiner() {
 
     if (!(isEntrance || isRecording)) {
         return (
-            <div className="min-vh-100 align-self-center">
-                <ChoiseOfStep
-                    onChangeEntrance={isEntrenceChoice}
-                    onChangeRecording={isRecordingChoice}
-                />
-            </div>
+            <ChoiseOfStep
+                onChangeEntrance={isEntrenceChoice}
+                onChangeRecording={isRecordingChoice}
+            />
         );
     }
 

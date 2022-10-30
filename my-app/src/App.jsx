@@ -10,7 +10,9 @@ function App() {
           <Navbar.Text className="text-center">ГБУЗ "ГП №1" г.Сочи Запись на обучение</Navbar.Text>
         </Container>
       </Navbar>
-      <FunctionalConteiner />
+      <Container className="d-flex mt-auto mb-auto justify-content-center align-items-center">
+        <FunctionalConteiner />
+      </Container>
       <Navbar expand="lg" fixed="bottom" className="min-vw-100 mt-auto">
         <Container className="d-flex justify-content-center">
           <Navbar.Text className="text-center">По вопросам предложений и улучшений обращаться по номеру: 8-952-836-06-42</Navbar.Text>

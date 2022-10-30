@@ -11,10 +11,12 @@ function ChoiseOfStep(props) {
   };
 
   return (
-    <div className="d-flex justify-content-center flex-wrap">
-      <Button variant="success" size="sm" onClick={onClickChangeEntrance}>Войти</Button>
-      <Button variant="primary" size="sm" onClick={onClickChangeRerording}>Записаться на прием</Button>
-    </div>
+    <>
+      <Button variant="success" size="sm"
+        onClick={onClickChangeEntrance}>Войти</Button>
+      <Button variant="primary" size="sm"
+        onClick={onClickChangeRerording}>Записаться на прием</Button>
+    </>
   );
 };
 
