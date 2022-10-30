@@ -11,11 +11,9 @@ function ChoiseOfStep(props) {
   };
 
   return (
-    <div id="choiseOfStep" className="d-flex justify-content-center align-items-center min-vh-100">
-      <div className="d-flex justify-content-center flex-wrap">
-        <Button variant="success" size="sm" onClick={onClickChangeEntrance}>Войти</Button>
-        <Button variant="primary" size="sm" onClick={onClickChangeRerording}>Записаться на прием</Button>
-      </div>
+    <div className="d-flex justify-content-center flex-wrap">
+      <Button variant="success" size="sm" onClick={onClickChangeEntrance}>Войти</Button>
+      <Button variant="primary" size="sm" onClick={onClickChangeRerording}>Записаться на прием</Button>
     </div>
   );
 };
