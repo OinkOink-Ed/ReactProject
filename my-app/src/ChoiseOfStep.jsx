@@ -1,4 +1,4 @@
-import { Button } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 
 function ChoiseOfStep(props) {
 
@@ -11,12 +11,12 @@ function ChoiseOfStep(props) {
   };
 
   return (
-    <>
+    <Container className="d-flex justify-content-center align-items-center flex-wrap align-content-center">
       <Button variant="success" size="sm"
         onClick={onClickChangeEntrance}>Войти</Button>
       <Button variant="primary" size="sm"
         onClick={onClickChangeRerording}>Записаться на прием</Button>
-    </>
+    </Container>
   );
 };
 
