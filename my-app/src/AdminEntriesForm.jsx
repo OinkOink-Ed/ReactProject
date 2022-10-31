@@ -1,6 +1,11 @@
 import { Button, Container, Form } from "react-bootstrap";
 
-function AdminEntriesForm() {
+function AdminEntriesForm(props) {
+
+    function onClickChangeEntrance() {
+        props.onChangeEntrance();
+    };
+
     return (
         <Container className="d-flex justify-content-center align-items-center">
             <Form className="shadow-lg rounded my-t-5 my-b-5">
@@ -20,7 +25,9 @@ function AdminEntriesForm() {
                 </Form.Group>
 
                 <Container className="d-flex justify-content-between">
-                    <Button variant="primary" size="sm">Назад</Button>
+                    <Button variant="primary" size="sm"
+                        onClick={onClickChangeEntrance}
+                    >Назад</Button>
                     <Button variant="primary" size="sm">Войти</Button>
                 </Container>
             </Form>

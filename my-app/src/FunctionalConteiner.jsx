@@ -25,7 +25,9 @@ function FunctionalConteiner() {
 
     if (isEntrance) {
         return (
-            <AdminEntriesForm />
+            <AdminEntriesForm
+                onChangeEntrance={isEntrenceChoice}
+            />
         );
     };
 
