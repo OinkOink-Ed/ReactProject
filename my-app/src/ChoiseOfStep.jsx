@@ -11,7 +11,7 @@ function ChoiseOfStep(props) {
   };
 
   return (
-    <Container className="d-flex justify-content-center align-items-center flex-wrap align-content-center">
+    <Container className="d-flex justify-content-center flex-wrap align-content-center">
       <Button variant="success" size="sm"
         onClick={onClickChangeEntrance}>Войти</Button>
       <Button variant="primary" size="sm"

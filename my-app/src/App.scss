@@ -50,6 +50,10 @@
 @import "myForm";
 @import "AdminEntriesForm";
 
+#root {
+  background-color: $cyan-300;
+}
+
 .navbar {
   background-color: $indigo-900;
 }
