@@ -1,6 +1,6 @@
 import { Navbar, Container } from "react-bootstrap";
-import FunctionalConteiner from "./FunctionalConteiner";
-import "./App.scss";
+import FunctionalConteiner from "./Components/FunctionalConteiner";
+import "./Styles/App.scss";
 
 function App() {
   return (
