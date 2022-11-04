@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ChoiseOfStep from "./ChoiseOfStep";
 import AdminEntriesForm from "./AdminEntriesForm";
+import FormOfRecording from "./FormOfRecording";
 
 function FunctionalConteiner() {
     const [isEntrance, SetIsEntrance] = useState(false);
@@ -33,9 +34,9 @@ function FunctionalConteiner() {
 
     if (isRecording) {
         return (
-            <div>
-                Это форма для записи
-            </div>
+            <FormOfRecording
+                onChangeRecording={isRecordingChoice}
+            />
         );
     };
 };

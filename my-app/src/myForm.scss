@@ -1,3 +1,7 @@
+.input-group {
+    width: auto
+}
+
 @include media-breakpoint-up(md) {
     .form-control-sm {
         min-height: calc(1.5em + 1rem + 2px);
