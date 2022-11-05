@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#App {
+    height: 100vh;
+    display: flex;
+}
+
+.my-bar {
+    width: 100vw;
+    background-color: rgb(0, 0, 0); 
+    display: flex;
+    justify-content: center;
+    position: fixed;
+}
+
+.my-bar-text {
+    padding: 0.7rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.footer {
+    bottom: 0;
+}
+
+@media screen and (min-width: 992px) {
+    * {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    * {
+        font-size: 16px;
+    }
+}
