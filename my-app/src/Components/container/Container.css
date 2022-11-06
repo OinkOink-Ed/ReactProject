@@ -1,0 +1,17 @@
+.app_container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text_bar_container {
+    padding: 0.65rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.choise_container {
+    align-self: center;
+    margin: 2rem 0;
+}
