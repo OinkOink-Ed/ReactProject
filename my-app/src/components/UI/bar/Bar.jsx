@@ -1,5 +1,5 @@
 import Container from "../container/Container";
-import "../bar/Bar.css"
+import "./Bar.css"
 
 function Bar({ children, ...props }) {
     return (

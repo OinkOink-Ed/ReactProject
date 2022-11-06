@@ -1,4 +1,4 @@
-import "../button/button.css"
+import "./button.css"
 
 function Button({ children, ...props }) {
     return (

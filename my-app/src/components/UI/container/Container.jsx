@@ -1,4 +1,4 @@
-import "../container/Container.css"
+import "./Container.css"
 
 function Container({ children, ...props }) {
     return (
