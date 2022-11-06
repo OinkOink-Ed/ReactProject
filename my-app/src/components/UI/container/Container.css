@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: coral;
 }
 
 .text_bar_container {
@@ -11,7 +12,7 @@
     text-align: center;
 }
 
-.choise_container {
+.group_btn_container {
     align-self: center;
     margin: 2rem 0;
 }
