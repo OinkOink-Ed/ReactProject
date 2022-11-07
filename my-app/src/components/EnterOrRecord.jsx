@@ -4,9 +4,9 @@ import Button from "./UI/button/Button"
 function EnterOrRecord({ onChange, ...props }) {
     return (
         <Container {...props}>
-            <Container className="groups_btn_container">
-                <Button className="btn" onClick={onChange}>Войти как администратор</Button>
-                <Button className="btn">Записаться на обучение</Button>
+            <Container className="groups_btn_container flex-wrap justify-content-center d-flex">
+                <Button className="btn p-1 m-2 justify-content-center" onClick={onChange}>Войти как администратор</Button>
+                <Button className="btn p-1 m-2 justify-content-center">Записаться на обучение</Button>
             </Container>
         </Container>
     )

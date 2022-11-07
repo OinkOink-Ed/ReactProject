@@ -5,12 +5,12 @@ import Form from "./UI/form/Form";
 function EntriesForm(props) {
     return (
         <Container {...props}>
-            <Form className="form">
-                <Container className="group_input_form_container">
+            <Form className="p-1 m-3">
+                <Container className="p-2">
                     <label>Введите Логин</label>
                     <input></input>
                 </Container>
-                <Container className="group_input_form_container">
+                <Container className="p-2">
                     <label>Введите пароль</label>
                     <input></input>
                 </Container>

@@ -15,7 +15,7 @@ function FunctionalContainer() {
 
     if (functionalBody.entriesForm) {
         return (
-            <Container className="choise_of_container">
+            <Container className="align-items-center h100v justify-content-center d-flex">
                 <EntriesForm className="entries_form"></EntriesForm>
             </Container>
         );
@@ -23,7 +23,7 @@ function FunctionalContainer() {
 
     if (!(functionalBody.entriesForm || functionalBody.recordForm)) {
         return (
-            <Container className="choise_of_container">
+            <Container className="align-items-center h100v justify-content-center d-flex">
                 <EnterOrRecord className="enter_or_record" onChange={onHandlerChange}></EnterOrRecord>
             </Container>
         );

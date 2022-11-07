@@ -5,13 +5,13 @@ import "./styles/App.css";
 
 function App() {
   return (
-    <Container className="app_container">
+    <Container className="app_container h100v">
       <Bar
-        className="header_bar bar">
+        className="fixed-top bar justify-content-center d-flex w100v">
         ГБУЗ "ГП №1 г.Сочи" МЗ КК Запись на обучение
       </Bar>
       <FunctionalContainer></FunctionalContainer>
-      <Bar className="footer_bar bar">
+      <Bar className="fixed-bottom bar justify-content-center d-flex w100v">
         По вопросам и предложениям по улучшению обращаться по номеру: 8-952-836-06-42
       </Bar>
     </Container >
