@@ -1,18 +1,27 @@
 .app_container {
     height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     background-color: coral;
 }
 
 .text_bar_container {
     padding: 0.65rem;
-    color: rgb(255, 255, 255);
+    color: rgb(51, 255, 0);
     text-align: center;
 }
 
-.group_btn_container {
-    align-self: center;
-    margin: 2rem 0;
+.choise_of_container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.groups_btn_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2.8em 2rem;
+    box-shadow: 0px 0px 5px 5px rgb(226, 112, 71);
+    background-color: coral;
+    border-radius: 0.3rem;
 }

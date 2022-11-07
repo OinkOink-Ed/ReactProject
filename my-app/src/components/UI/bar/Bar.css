@@ -1,6 +1,6 @@
 .bar {
     width: 100vw;
-    background-color: rgb(0, 0, 0); 
+    background-color: rgb(46, 0, 73); 
     display: flex;
     justify-content: center;
 }
