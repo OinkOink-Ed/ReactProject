@@ -6,11 +6,11 @@ function EntriesForm(props) {
     return (
         <Container {...props}>
             <Form className="p-1 m-3">
-                <Container className="p-2">
+                <Container className="p-1">
                     <label>Введите Логин</label>
                     <input></input>
                 </Container>
-                <Container className="p-2">
+                <Container className="p-1">
                     <label>Введите пароль</label>
                     <input></input>
                 </Container>
