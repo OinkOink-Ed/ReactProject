@@ -1,3 +1,5 @@
+@import "./variables.css";
+
 * {
     margin: 0;
     padding: 0;
@@ -87,36 +89,36 @@
 }
 
 .bar {
-    background-color: rgb(46, 0, 73);
+    background-color: var(--color-purple);
 }
 
 .btn {
     font-size: inherit;
     font-style: inherit;
-    background-color: blueviolet;
-    border: 1px solid blueviolet;
-    color:rgb(236, 235, 235);
+    background-color: var(--color-teal);
+    border: 1px solid var(--color-teal);
+    color: var(--color-black);
     border-radius: 0.3rem;
     min-width: 14.1rem;
 }
 
 .btn:hover {
-    background-color: rgb(132, 0, 255);
-    border: 1px solid rgb(132, 0, 255);
+    background-color: rgb(24, 151, 113);
+    border: 1px solid rgb(24, 151, 113);
     cursor: pointer;
 }
 
 .app_container {
-    background-color: coral;
+    background-color: var(--color-coral);
 }
 
 .text_bar_container {
-    color: rgb(51, 255, 0);
+    color: var(--color-black);
 }
 
 .groups_btn_container {
     box-shadow: 0px 0px 5px 5px rgb(226, 112, 71);
-    background-color: coral;
+    background-color: var(--color-coral);
     border-radius: 0.3rem;
 }
 
