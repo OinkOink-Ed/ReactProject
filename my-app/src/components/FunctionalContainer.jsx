@@ -4,7 +4,7 @@ import EnterOrRecord from "./EnterOrRecord";
 function FunctionalContainer() {
     return (
         <Container className="choise_of_container">
-            <EnterOrRecord></EnterOrRecord>
+            <EnterOrRecord className="enter_or_record"></EnterOrRecord>
         </Container>
     );
 };

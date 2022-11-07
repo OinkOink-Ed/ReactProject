@@ -1,9 +1,9 @@
 import Container from "./UI/container/Container";
 import Button from "./UI/button/Button"
 
-function EnterOrRecord() {
+function EnterOrRecord(props) {
     return (
-        <Container>
+        <Container {...props}>
             <Container className="groups_btn_container">
                 <Button className="btn">Войти как администратор</Button>
                 <Button className="btn">Записаться на обучение</Button>
