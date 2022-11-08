@@ -1,6 +1,6 @@
-function Form({ children, ...props }) {
+function Form(props) {
     return (
-        <form {...props}>{children}</form>
+        <form {...props}></form>
     );
 };
 

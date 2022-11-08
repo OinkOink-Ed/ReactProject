@@ -9,14 +9,15 @@ function FunctionalContainer() {
         recordForm: false,
     });
 
-    function onHandlerChange() {
+    function onHandlerChange(e) {
+        e.preventDefault();
         SetfunctionalBody({ ...functionalBody, entriesForm: !functionalBody.entriesForm });
     };
 
     if (functionalBody.entriesForm) {
         return (
             <Container className="align-items-center h100v justify-content-center d-flex">
-                <EntriesForm className="entries_form"></EntriesForm>
+                <EntriesForm className="entries_form" onChange={onHandlerChange}></EntriesForm>
             </Container>
         );
     };
