@@ -2,12 +2,13 @@ import myClasses from "../button/entriesOrRecording.module.css";
 
 function Button({ children, className, ...props }) {
     let classesNames = [];
+    let myClassName = className;
 
-    className = Array.from(className).join('').split(' ');
+    myClassName = Array.from(myClassName).join('').split(' ');
 
     for (let key in myClasses) {
-        for (let count = 0; count < className.length; count++) {
-            if (key === className[count]) {
+        for (let count = 0; count < myClassName.length; count++) {
+            if (key === myClassName[count]) {
                 classesNames.push(myClasses[key]);
             };
         };
