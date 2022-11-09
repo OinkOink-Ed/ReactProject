@@ -8,20 +8,20 @@ function EntriesForm({ onChange, ...props }) {
 
     return (
         <Container {...props}>
-            <Form autoComplete="on" className="p-1 m-3 d-flex flex-column shadow-func-cont">
-                <Container className="d-flex flex-column">
-                    <Label className="mb-1">Введите Логин</Label>
-                    <Input placeholder="Логин" type="text"></Input>
+            <Form className="entries-form">
+                <Container className="groups-elemnts-form">
+                    <Label className="label-form">Введите Логин</Label>
+                    <Input className="input-form" placeholder="Логин" type="text"></Input>
                 </Container>
-                <Container className="d-flex flex-column mt-2">
-                    <Label className="mb-1">Введите пароль</Label>
-                    <Input placeholder="Пароль" type="current-password"></Input>
+                <Container className="groups-elemnts-form">
+                    <Label className="label-form">Введите пароль</Label>
+                    <Input className="input-form" placeholder="Пароль" type="current-password"></Input>
                 </Container>
-                <Container className="d-flex mt-1 justify-content-between">
-                    <Button className="btn bg-teal br-teal p-1"
+                <Container className="groups-btn-form">
+                    <Button className="btn-back btn"
                         onClick={onChange}>
                         Назад</Button>
-                    <Button className="btn bg-green br-green p-1"
+                    <Button className="btn-entries btn"
                         onClick={onChange}>
                         Войти</Button>
                 </Container>

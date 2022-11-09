@@ -16,16 +16,16 @@ function FunctionalContainer() {
 
     if (functionalBody.entriesForm) {
         return (
-            <Container className="align-items-center h100v justify-content-center d-flex">
-                <EntriesForm className="entries_form" onChange={onHandlerChange}></EntriesForm>
+            <Container className="functional-conteiner">
+                <EntriesForm onChange={onHandlerChange}></EntriesForm>
             </Container>
         );
     };
 
     if (!(functionalBody.entriesForm || functionalBody.recordForm)) {
         return (
-            <Container className="align-items-center h100v justify-content-center d-flex">
-                <EnterOrRecord className="enter_or_record" onChange={onHandlerChange}></EnterOrRecord>
+            <Container className="functional-conteiner">
+                <EnterOrRecord onChange={onHandlerChange}></EnterOrRecord>
             </Container>
         );
     };
