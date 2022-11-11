@@ -1,3 +1,7 @@
-.label-form {
+.label-form{
+    margin-top: 1rem;
+}
+
+.label-input {
     margin: 1rem 0rem;
 }

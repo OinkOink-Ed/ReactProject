@@ -22,7 +22,7 @@ function FunctionalContainer(props) {
 
     if (!(functionalBody.entriesForm || functionalBody.recordingForm)) {
         return (
-            <Container className="functional-conteiner">
+            <Container {...props}>
                 <EnterOrRecord className="groups-btn"
                     onRecording={onHandlerChoiseRecording}
                     onEntries={onHandlerChoiseEntries}
@@ -34,7 +34,8 @@ function FunctionalContainer(props) {
     if (functionalBody.recordingForm) {
         return (
             <Container {...props}>
-                <RecordingForm onRecording={onHandlerChoiseRecording}>
+                <RecordingForm className="form"
+                    onRecording={onHandlerChoiseRecording}>
                 </RecordingForm>
             </Container>
         );

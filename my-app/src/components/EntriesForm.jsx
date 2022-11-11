@@ -9,11 +9,11 @@ function EntriesForm({ onEntries, ...props }) {
     return (
         <Form {...props}>
             <Container className="groups-elemnts-form">
-                <Label className="label-form">Введите Логин</Label>
+                <Label className="label-input">Введите Логин</Label>
                 <Input className="input-form" placeholder="Логин" type="text"></Input>
             </Container>
             <Container className="groups-elemnts-form">
-                <Label className="label-form">Введите пароль</Label>
+                <Label className="label-input">Введите пароль</Label>
                 <Input className="input-form" placeholder="Пароль" type="current-password"></Input>
             </Container>
             <Container className="groups-btn-form">
