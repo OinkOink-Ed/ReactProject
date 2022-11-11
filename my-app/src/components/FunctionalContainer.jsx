@@ -1,31 +1,51 @@
 import Container from "./UI/container/Container";
 import EnterOrRecord from "./EnterOrRecord";
 import EntriesForm from "./EntriesForm";
+import RecordingForm from "./RecordingForm";
 import { useState } from "react";
 
-function FunctionalContainer() {
+function FunctionalContainer(props) {
     const [functionalBody, SetfunctionalBody] = useState({
         entriesForm: false,
-        recordForm: false,
+        recordingForm: false,
     });
 
-    function onHandlerChange(e) {
+    function onHandlerChoiseEntries(e) {
         e.preventDefault();
         SetfunctionalBody({ ...functionalBody, entriesForm: !functionalBody.entriesForm });
     };
 
-    if (functionalBody.entriesForm) {
+    function onHandlerChoiseRecording(e) {
+        e.preventDefault();
+        SetfunctionalBody({ ...functionalBody, recordingForm: !functionalBody.recordingForm });
+    };
+
+    if (!(functionalBody.entriesForm || functionalBody.recordingForm)) {
         return (
             <Container className="functional-conteiner">
-                <EntriesForm onChange={onHandlerChange}></EntriesForm>
+                <EnterOrRecord className="groups-btn"
+                    onRecording={onHandlerChoiseRecording}
+                    onEntries={onHandlerChoiseEntries}
+                ></EnterOrRecord>
             </Container>
         );
     };
 
-    if (!(functionalBody.entriesForm || functionalBody.recordForm)) {
+    if (functionalBody.recordingForm) {
         return (
-            <Container className="functional-conteiner">
-                <EnterOrRecord onChange={onHandlerChange}></EnterOrRecord>
+            <Container {...props}>
+                <RecordingForm onRecording={onHandlerChoiseRecording}>
+                </RecordingForm>
+            </Container>
+        );
+    };
+
+    if (functionalBody.entriesForm) {
+        return (
+            <Container {...props}>
+                <EntriesForm className="form"
+                    onEntries={onHandlerChoiseEntries}
+                ></EntriesForm>
             </Container>
         );
     };

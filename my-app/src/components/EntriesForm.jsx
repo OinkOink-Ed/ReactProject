@@ -4,10 +4,10 @@ import Input from "./UI/input/Input";
 import Button from "./UI/button/Button";
 import Label from "./UI/label/Label";
 
-function EntriesForm({ onChange, ...props }) {
+function EntriesForm({ onEntries, ...props }) {
 
     return (
-        <Form className="entries-form">
+        <Form {...props}>
             <Container className="groups-elemnts-form">
                 <Label className="label-form">Введите Логин</Label>
                 <Input className="input-form" placeholder="Логин" type="text"></Input>
@@ -18,11 +18,9 @@ function EntriesForm({ onChange, ...props }) {
             </Container>
             <Container className="groups-btn-form">
                 <Button className="btn-back btn"
-                    onClick={onChange}>
+                    onClick={onEntries}>
                     Назад</Button>
-                <Button className="btn-entries btn"
-                    onClick={onChange}>
-                    Войти</Button>
+                <Button className="btn-entries btn" onClick={onEntries}>Войти</Button>
             </Container>
         </Form>
     );
