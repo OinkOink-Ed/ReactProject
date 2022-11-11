@@ -1,8 +1,10 @@
-import myClasses from "../button/entriesOrRecording.module.css";
+import myClasses from '../button/button.module.css';
 
 function Button({ children, className, ...props }) {
     let classesNames = [];
     let myClassName = className;
+
+    console.log(myClassName);
 
     myClassName = Array.from(myClassName).join('').split(' ');
 
