@@ -1,5 +1,4 @@
 .app-body {
-    height: 100vh;
     background-color: var(--color-coral);
 }
 
@@ -28,7 +27,7 @@
 .functional-conteiner {
     display: flex;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
 }
 
@@ -39,6 +38,8 @@
     border-radius: 0.3rem;
     flex-direction: column;
     box-shadow: 0px 0px 5px 5px rgb(226, 112, 71);
+    margin-top: 4rem;
+    margin-bottom: 5rem;
 }
 
 .groups-elemnts-form {
@@ -61,5 +62,6 @@
 @media screen and (min-width: 500px){
     .groups-btn{
         flex-direction: row;
+        margin: 4rem 0;
     }
 }

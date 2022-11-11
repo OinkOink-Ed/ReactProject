@@ -4,8 +4,6 @@ function Button({ children, className, ...props }) {
     let classesNames = [];
     let myClassName = className;
 
-    console.log(myClassName);
-
     myClassName = Array.from(myClassName).join('').split(' ');
 
     for (let key in myClasses) {

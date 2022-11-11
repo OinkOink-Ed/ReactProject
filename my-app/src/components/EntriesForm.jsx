@@ -24,7 +24,7 @@ function EntriesForm({ onChange, ...props }) {
                     onClick={onChange}>
                     Войти</Button>
             </Container>
-        </Form >
+        </Form>
     );
 };
 

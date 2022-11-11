@@ -17,7 +17,7 @@ function FunctionalContainer() {
     if (functionalBody.entriesForm) {
         return (
             <Container className="functional-conteiner">
-                <EntriesForm className="entries-form" onChange={onHandlerChange}></EntriesForm>
+                <EntriesForm onChange={onHandlerChange}></EntriesForm>
             </Container>
         );
     };
