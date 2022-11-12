@@ -1,7 +1,7 @@
 import Container from "./UI/container/Container";
 import Form from "./UI/form/Form";
 import Input from "./UI/input/Input";
-import Button from "./UI/button/Button";
+import Button from "./UI/button/button";
 import Label from "./UI/label/Label";
 
 function EntriesForm({ onEntries, ...props }) {

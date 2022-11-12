@@ -2,13 +2,12 @@ import Form from "./UI/form/Form";
 import Container from "./UI/container/Container";
 import Label from "./UI/label/Label";
 import Input from "./UI/input/Input";
-import Button from "./UI/button/Button";
+import Button from "./UI/button/button";
 
 function RecordingForm({ onRecording, ...props }) {
     return (
         <Form {...props}>
             <Container className="groups-elemnts-form">
-                <Label className="label-form">Заполните форму</Label>
                 <Label className="label-input">Фамилия</Label>
                 <Input className="input-form" placeholder="Фамилия" type="text"></Input>
             </Container>

@@ -1,24 +1,9 @@
+import usingClasses from '../../../usingClasses';
 import myClasses from "../form/form.module.css";
 
 function Form({ className, children, ...props }) {
-
-    let classesNames = [];
-    let myClassName = className;
-
-    if (myClassName !== undefined) {
-        myClassName = Array.from(myClassName).join('').split(' ');
-
-        for (let key in myClasses) {
-            for (let count = 0; count < myClassName.length; count++) {
-                if (key === myClassName[count]) {
-                    classesNames.push(myClasses[key]);
-                };
-            };
-        };
-    };
-
     return (
-        <form className={classesNames.join(' ')}>{children}</form>
+        <form className={usingClasses(myClasses, className).join(' ')}>{children}</form>
     );
 };
 

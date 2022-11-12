@@ -1,5 +1,5 @@
 import Container from "./UI/container/Container";
-import Button from "./UI/button/Button"
+import Button from "./UI/button/button"
 
 function EnterOrRecord({ onEntries, onRecording, ...props }) {
     return (
