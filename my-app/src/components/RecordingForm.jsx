@@ -4,7 +4,7 @@ import Label from "./UI/label/Label";
 import Input from "./UI/input/Input";
 import Button from "./UI/button/button";
 
-function RecordingForm({ onRecording, ...props }) {
+function RecordingForm({ onBack, onrecord, ...props }) {
     return (
         <Form {...props}>
             <Container className="groups-elemnts-form">
@@ -28,8 +28,8 @@ function RecordingForm({ onRecording, ...props }) {
                 <Input className="input-form" placeholder="Должность" type="text"></Input>
             </Container>
             <Container>
-                <Button className="btn-back btn" onClick={onRecording}>Назад</Button>
-                <Button className="btn-back btn" onClick={onRecording}>Записаться</Button>
+                <Button className="btn-back btn" onClick={onBack}>Назад</Button>
+                <Button className="btn-back btn" onClick={onrecord}>Записаться</Button>
             </Container>
         </Form>
     );

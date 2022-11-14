@@ -24,7 +24,7 @@
     bottom: 0;
 }
 
-.functional-conteiner {
+.body-conteiner {
     display: flex;
     justify-content: center;
     min-height: 100vh;

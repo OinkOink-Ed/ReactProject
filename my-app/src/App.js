@@ -1,6 +1,6 @@
-import Bar from "./components/UI/bar/Bar";
+import Bar from "./components/Bar";
 import Container from "./components/UI/container/Container";
-import FunctionalContainer from "./components/FunctionalContainer";
+import ChoiseForms from "./components/ChoiseForms";
 import "./styles/App.css";
 
 function App() {
@@ -10,7 +10,9 @@ function App() {
         className="header-bar bar">
         ГБУЗ "ГП №1 г.Сочи" МЗ КК Запись на обучение
       </Bar>
-      <FunctionalContainer className="functional-conteiner" />
+      <Container className="body-conteiner">
+        <ChoiseForms />
+      </Container>
       <Bar className="footer-bar bar">
         По вопросам и предложениям по улучшению обращаться по номеру: 8-952-836-06-42
       </Bar>

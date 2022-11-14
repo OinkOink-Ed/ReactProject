@@ -4,7 +4,7 @@ import Input from "./UI/input/Input";
 import Button from "./UI/button/button";
 import Label from "./UI/label/Label";
 
-function EntriesForm({ onEntries, ...props }) {
+function EntriesForm({ onBack, onAdmin, ...props }) {
 
     return (
         <Form {...props}>
@@ -18,9 +18,9 @@ function EntriesForm({ onEntries, ...props }) {
             </Container>
             <Container className="groups-btn-form">
                 <Button className="btn-back btn"
-                    onClick={onEntries}>
+                    onClick={onBack}>
                     Назад</Button>
-                <Button className="btn-entries btn" onClick={onEntries}>Войти</Button>
+                <Button className="btn-entries btn" onClick={onAdmin}>Войти</Button>
             </Container>
         </Form>
     );
