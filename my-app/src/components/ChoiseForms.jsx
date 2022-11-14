@@ -2,6 +2,7 @@ import EnterOrRecord from "./EnterOrRecord";
 import EntriesForm from "./EntriesForm"
 import RecordingForm from "./RecordingForm";
 import { useState } from "react";
+import Container from "./UI/container/Container";
 
 function ChoiseForms() {
     const [functionalBody, SetfunctionalBody] = useState({
@@ -32,7 +33,6 @@ function ChoiseForms() {
     if (functionalBody.entriesForm) {
         renderElement = <EntriesForm
             onBack={onHandlerChoiseEntries}
-            onAdmin
             className="form"
         />
     };
@@ -40,12 +40,15 @@ function ChoiseForms() {
     if (functionalBody.recordingForm) {
         renderElement = <RecordingForm
             onBack={onHandlerChoiseRecording}
-            onrecord
             className="form"
         />
     };
 
-    return (renderElement);
+    return (
+        <Container className="functional-conteiner">
+            {renderElement}
+        </Container>
+    );
 };
 
 export default ChoiseForms;

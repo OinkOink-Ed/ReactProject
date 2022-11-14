@@ -4,7 +4,7 @@ import Input from "./UI/input/Input";
 import Button from "./UI/button/button";
 import Label from "./UI/label/Label";
 
-function EntriesForm({ onBack, onAdmin, ...props }) {
+function EntriesForm({ onBack, ...props }) {
 
     return (
         <Form {...props}>
@@ -20,7 +20,7 @@ function EntriesForm({ onBack, onAdmin, ...props }) {
                 <Button className="btn-back btn"
                     onClick={onBack}>
                     Назад</Button>
-                <Button className="btn-entries btn" onClick={onAdmin}>Войти</Button>
+                <Button className="btn-entries btn" onClick>Войти</Button>
             </Container>
         </Form>
     );

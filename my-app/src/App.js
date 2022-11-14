@@ -1,7 +1,9 @@
 import Bar from "./components/Bar";
-import Container from "./components/UI/container/Container";
 import ChoiseForms from "./components/ChoiseForms";
+import Container from "./components/UI/container/Container";
 import "./styles/App.css";
+
+
 
 function App() {
   return (
@@ -10,7 +12,7 @@ function App() {
         className="header-bar bar">
         ГБУЗ "ГП №1 г.Сочи" МЗ КК Запись на обучение
       </Bar>
-      <Container className="body-conteiner">
+      <Container className="body-container">
         <ChoiseForms />
       </Container>
       <Bar className="footer-bar bar">

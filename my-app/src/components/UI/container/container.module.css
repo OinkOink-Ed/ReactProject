@@ -24,7 +24,7 @@
     bottom: 0;
 }
 
-.body-conteiner {
+.body-container {
     display: flex;
     justify-content: center;
     min-height: 100vh;
