@@ -1,24 +1,14 @@
-import Bar from "./components/Bar";
-import ChoiseForms from "./components/ChoiseForms";
-import Container from "./components/UI/container/Container";
-import "./styles/App.css";
-
-
+import Home from "./pages/Home";
+import Admin from "./pages/Admin";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <Container className="app-body">
-      <Bar
-        className="header-bar bar">
-        ГБУЗ "ГП №1 г.Сочи" МЗ КК Запись на обучение
-      </Bar>
-      <Container className="body-container">
-        <ChoiseForms />
-      </Container>
-      <Bar className="footer-bar bar">
-        По вопросам и предложениям по улучшению обращаться по номеру: 8-952-836-06-42
-      </Bar>
-    </Container >
+    <Routes>
+      <Route path="/home" element={<Home />} />
+      <Route path="/admin" element={<Admin />} />
+      <Route path="*" element={<Home />} />
+    </Routes>
   );
 };
 
