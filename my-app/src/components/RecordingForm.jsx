@@ -19,19 +19,29 @@ function RecordingForm({ onBack, ...props }) {
                 <Label className="label-input">Отчество</Label>
                 <Input className="input-form" placeholder="Имя" type="text"></Input>
             </Container>
+            {/*Реализовать select для выборки подразделения и должности*/}
             <Container className="groups-elemnts-form">
                 <Label className="label-input">Подразделение</Label>
-                <Input className="input-form" placeholder="Подразделение" type="text"></Input>
+                <Input className="input-form" placeholder="Подразделение" type="text">
+                </Input>
             </Container>
             <Container className="groups-elemnts-form">
                 <Label className="label-input">Должность</Label>
                 <Input className="input-form" placeholder="Должность" type="text"></Input>
             </Container>
+            <Container className="groups-elemnts-form">
+                <Label className="label-input">Дата</Label>
+                <Input className="input-form" placeholder="дд.мм.гггг" type="date"></Input>
+            </Container>
+            <Container className="groups-elemnts-form">
+                <Label className="label-input">Время</Label>
+                <Input className="input-form" placeholder="чч.чч" type="time"></Input>
+            </Container>
             <Container>
                 <Button className="btn-back btn" onClick={onBack}>Назад</Button>
                 <Button className="btn-back btn" onClick>Записаться</Button>
             </Container>
-        </Form>
+        </Form >
     );
 };
 
