@@ -10,7 +10,6 @@ function Admin() {
                 Setdata(data = text);
             });
         });
-        console.log(data);
     };
 
     return (
