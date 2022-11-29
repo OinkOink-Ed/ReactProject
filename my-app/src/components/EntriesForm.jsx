@@ -3,8 +3,15 @@ import Form from "./UI/form/Form";
 import Input from "./UI/input/Input";
 import Button from "./UI/button/button";
 import Label from "./UI/label/Label";
+import { useNavigate } from 'react-router-dom';
 
 function EntriesForm({ onBack, ...props }) {
+    let navigate = useNavigate();
+
+    function entries(e) {
+        e.preventDefault();
+        navigate("/admin");
+    };
 
     return (
         <Form {...props}>
@@ -20,7 +27,7 @@ function EntriesForm({ onBack, ...props }) {
                 <Button className="btn-back btn"
                     onClick={onBack}>
                     Назад</Button>
-                <Button className="btn-entries btn" onClick>Войти</Button>
+                <Button className="btn-entries btn" onClick={entries}>Войти</Button>
             </Container>
         </Form>
     );
