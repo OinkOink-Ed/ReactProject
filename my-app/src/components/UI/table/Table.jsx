@@ -1,11 +1,7 @@
-function Table(props) {
-
-    let content = props.contents;
-    console.log(content);
-
+function Table({ contents, tableName }) {
     return (
         <table>
-            <caption></caption>
+            <caption>{tableName}</caption>
             <thead></thead>
             <tbody></tbody>
         </table>

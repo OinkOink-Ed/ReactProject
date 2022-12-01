@@ -1,35 +1,35 @@
 import { useState } from "react";
+import queryRequest from "../queryRequests";
 import Table from "../components/UI/table/Table";
 
 function Admin() {
-
-    let [content, Setdata] = useState();
+    const [table, SetTable] = useState({
+        data: null,
+        name: null,
+        status: false,
+    });
 
     async function onHandlerClick() {
-        let response = await fetch("http://oinkoink", {
+        let response = await queryRequest({
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "text/plain"
             },
             body: JSON.stringify({
-                "type": "opt_1",
+                "type": "opt_7",
             }),
         });
-
-        if (response.ok) {
-            let data = await response.json();
-            Setdata(data);
+        if (typeof response === 'object') {
+            SetTable({ ...table, date: response.result, name: response.options, status: true });
         } else {
-            alert("HTTP ошибка сервера: " + response.status);
+            alert("Произошла ошибка " + response);
         };
     };
 
     return (
         <div>
             <button onClick={onHandlerClick}>Получить данные из БД</button>
-            <div>
-                <Table contents={content}></Table>
-            </div>
+            {table.status && <div><Table contents={table.data} tableName={table.name}></Table></div>}
         </div>
     );
 };
