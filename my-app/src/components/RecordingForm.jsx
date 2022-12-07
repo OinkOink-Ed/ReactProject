@@ -19,7 +19,10 @@ function RecordingForm({ onBack, ...props }) {
                 <Label className="label-input">Отчество</Label>
                 <Input className="input-form" placeholder="Имя" type="text"></Input>
             </Container>
-            {/*Реализовать select для выборки подразделения и должности*/}
+            {/*
+                Реализовать select для выборки подразделения и должности
+                Через useEffect() во время первого маунта
+            */}
             <Container className="groups-elemnts-form">
                 <Label className="label-input">Подразделение</Label>
                 <Input className="input-form" placeholder="Подразделение" type="text">
@@ -30,6 +33,9 @@ function RecordingForm({ onBack, ...props }) {
                 <Input className="input-form" placeholder="Должность" type="text"></Input>
             </Container>
             <Container className="groups-elemnts-form">
+                {/*
+                    Сделать свой календарь + выбор времени.
+                */}
                 <Label className="label-input">Дата</Label>
                 <Input className="input-form" placeholder="дд.мм.гггг" type="date"></Input>
             </Container>
