@@ -23,10 +23,7 @@ function RecordingForm({ onBack, ...props }) {
                 <Label className="label-input">Отчество</Label>
                 <Input className="input-form" placeholder="Имя" type="text"></Input>
             </Container>
-            {/*
-                Реализовать select для выборки подразделения и должности
-                Через useEffect() во время первого маунта
-            */}
+
             <Container className="groups-elemnts-form">
                 <Label className="label-input">Подразделение</Label>
                 <Select required>

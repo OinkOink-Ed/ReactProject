@@ -20,7 +20,7 @@ function useGetOptions(name) {
             SetResult(lists);
         };
         fetchData();
-    }, []);
+    }, [name]);
 
     return result;
 };
