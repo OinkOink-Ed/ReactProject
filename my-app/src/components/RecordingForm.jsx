@@ -7,7 +7,7 @@ import Select from "./UI/select/Select";
 import useGetOptions from "./hooks/useGetOptions";
 
 function RecordingForm({ onBack, ...props }) {
-    const subdivision = useGetOptions();
+    const subdivision = useGetOptions("subdivision");
 
     return (
         <Form {...props}>
