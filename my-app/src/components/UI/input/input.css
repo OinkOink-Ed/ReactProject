@@ -5,6 +5,11 @@
     border: none;
 }
 
+.input-form:hover{
+    outline: none;
+    box-shadow: inset 0 0 0.3rem 0.1rem var(--color-teal);
+}
+
 .input-form:focus {
     outline: none;
     box-shadow: inset 0 0 0.3rem 0.1rem var(--color-teal);

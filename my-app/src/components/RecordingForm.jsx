@@ -4,6 +4,7 @@ import Label from "./UI/label/Label";
 import Input from "./UI/input/Input";
 import Button from "./UI/button/button";
 import Select from "./UI/select/Select";
+import Option from "../components/UI/option/Option";
 import useGetOptions from "./hooks/useGetOptions";
 
 function RecordingForm({ onBack, ...props }) {
@@ -21,13 +22,13 @@ function RecordingForm({ onBack, ...props }) {
             </Container>
             <Container className="groups-elemnts-form">
                 <Label className="label-input">Отчество</Label>
-                <Input className="input-form" placeholder="Имя" type="text"></Input>
+                <Input className="input-form" placeholder="Отчество" type="text"></Input>
             </Container>
 
             <Container className="groups-elemnts-form">
                 <Label className="label-input">Подразделение</Label>
-                <Select required>
-                    <option>Выберите подразделение</option>
+                <Select required className="subdivision">
+                    <Option>Выберите подразделение</Option>
                     {subdivision}
                 </Select>
             </Container>

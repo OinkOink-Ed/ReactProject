@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useState } from 'react';
+import Option from "../UI/option/Option";
 import queryRequest from '../../queryRequests';
 
 function useGetOptions(name) {
@@ -16,7 +17,7 @@ function useGetOptions(name) {
                     "name": name,
                 }),
             });
-            const lists = result.map((element) => <option key={element.id} value={element.name}>{element.name}</option>);
+            const lists = result.map((element) => <Option key={element.id} value={element.name}>{element.name}</Option>);
             SetResult(lists);
         };
         fetchData();

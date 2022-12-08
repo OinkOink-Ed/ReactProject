@@ -1,6 +1,9 @@
-function Select({ children, lists, ...props }) {
+import usingCssClasses from '../../../usingCssClasses';
+import myClasses from "../select/Select.module.css";
+
+function Select({ children, lists, className, ...props }) {
     return (
-        <select {...props}>{children}</select>
+        <select {...props} className={usingCssClasses(myClasses, className).join()}>{children}</select>
     );
 };
 
