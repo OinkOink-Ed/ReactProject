@@ -3,8 +3,12 @@ import Container from "./UI/container/Container";
 import Label from "./UI/label/Label";
 import Input from "./UI/input/Input";
 import Button from "./UI/button/button";
+import Select from "./UI/select/Select";
+import useGetOptions from "./hooks/useGetOptions";
 
 function RecordingForm({ onBack, ...props }) {
+    const subdivision = useGetOptions();
+
     return (
         <Form {...props}>
             <Container className="groups-elemnts-form">
@@ -25,8 +29,10 @@ function RecordingForm({ onBack, ...props }) {
             */}
             <Container className="groups-elemnts-form">
                 <Label className="label-input">Подразделение</Label>
-                <Input className="input-form" placeholder="Подразделение" type="text">
-                </Input>
+                <Select required>
+                    <option>Выберите подразделение</option>
+                    {subdivision}
+                </Select>
             </Container>
             <Container className="groups-elemnts-form">
                 <Label className="label-input">Должность</Label>
@@ -45,7 +51,7 @@ function RecordingForm({ onBack, ...props }) {
             </Container>
             <Container>
                 <Button className="btn-back btn" onClick={onBack}>Назад</Button>
-                <Button className="btn-back btn" onClick>Записаться</Button>
+                <Button className="btn-back btn">Записаться</Button>
             </Container>
         </Form >
     );

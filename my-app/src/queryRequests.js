@@ -1,13 +1,13 @@
-async function QueryRequest(parameters) {
+async function queryRequest(parameters) {
 
     let response = await fetch("http://oinkoink", parameters);
 
     if (response.ok) {
         let data = await response.json();
-        return data;
+        return data.result;
     } else {
         return response.status;
     };
 };
 
-export default QueryRequest;
+export default queryRequest;
