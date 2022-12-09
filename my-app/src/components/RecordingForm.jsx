@@ -28,7 +28,7 @@ function RecordingForm({ onBack, ...props }) {
             <Container className="groups-elemnts-form">
                 <Label className="label-input">Подразделение</Label>
                 <Select required className="subdivision">
-                    <Option>Выберите подразделение</Option>
+                    <Option className="subdivision-op">Выберите подразделение</Option>
                     {subdivision}
                 </Select>
             </Container>
@@ -41,11 +41,11 @@ function RecordingForm({ onBack, ...props }) {
                     Сделать свой календарь + выбор времени.
                 */}
                 <Label className="label-input">Дата</Label>
-                <Input className="input-form" placeholder="дд.мм.гггг" type="date"></Input>
+                <Input className="input-form" placeholder="дд.мм.гггг" type="date" readOnly></Input>
             </Container>
             <Container className="groups-elemnts-form">
                 <Label className="label-input">Время</Label>
-                <Input className="input-form" placeholder="чч.чч" type="time"></Input>
+                <Input className="input-form" placeholder="чч.чч" type="time" readOnly></Input>
             </Container>
             <Container>
                 <Button className="btn-back btn" onClick={onBack}>Назад</Button>
