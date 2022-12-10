@@ -1,9 +1,9 @@
-import usingCssClasses from '../../../usingCssClasses';
+import createCssClasses from '../../functions/createCssClasses';
 import myClasses from "../form/form.module.css";
 
 function Form({ className, children, ...props }) {
     return (
-        <form className={usingCssClasses(myClasses, className).join(' ')}>{children}</form>
+        <form className={createCssClasses(myClasses, className).join(' ')}>{children}</form>
     );
 };
 

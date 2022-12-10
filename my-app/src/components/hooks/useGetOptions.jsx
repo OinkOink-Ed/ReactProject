@@ -1,12 +1,12 @@
-import { useEffect } from 'react';
 import { useState } from 'react';
 import Option from "../UI/option/Option";
-import queryRequest from '../../queryRequests';
+import queryRequest from '../functions/queryRequests';
+import { useMemo } from 'react';
 
 function useGetOptions(name) {
     const [result, SetResult] = useState();
 
-    useEffect(() => {
+    useMemo(() => {
         const fetchData = async () => {
             const result = await queryRequest({
                 method: "POST",

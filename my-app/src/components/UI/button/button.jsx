@@ -1,10 +1,10 @@
-import usingCssClasses from '../../../usingCssClasses';
+import createCssClasses from '../../functions/createCssClasses';
 import myClasses from '../button/button.module.css';
 
 function Button({ children, className, ...props }) {
     return (
         <button {...props}
-            className={usingCssClasses(myClasses, className).join(' ')}
+            className={createCssClasses(myClasses, className).join(' ')}
         >{children}</button >
     );
 };

@@ -1,4 +1,4 @@
-function usingCssClasses(myClasses, className) {
+function createCssClasses(myClasses, className) {
     let classesNames = [];
     let myClassName = className;
 
@@ -17,4 +17,4 @@ function usingCssClasses(myClasses, className) {
     return classesNames;
 };
 
-export default usingCssClasses;
+export default createCssClasses;

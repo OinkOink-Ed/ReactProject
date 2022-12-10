@@ -1,9 +1,9 @@
-import usingCssClasses from '../../../usingCssClasses';
+import createCssClasses from '../../functions/createCssClasses';
 import myClasses from "../container/container.module.css";
 
 function Container({ children, className, ...props }) {
     return (
-        <div {...props} className={usingCssClasses(myClasses, className).join(' ')}>{children}</div>
+        <div {...props} className={createCssClasses(myClasses, className).join(' ')}>{children}</div>
     );
 };
 
