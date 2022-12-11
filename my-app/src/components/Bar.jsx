@@ -1,4 +1,4 @@
-import Container from "./UI/container/Container";
+import Container from "./UI/containers/Container";
 
 function Bar({ children, ...props }) {
     return (

@@ -1,53 +1,34 @@
 import Form from "./UI/form/Form";
-import Container from "./UI/container/Container";
-import Label from "./UI/label/Label";
-import Input from "./UI/input/Input";
+import Container from "./UI/containers/Container";
 import Button from "./UI/button/button";
-import Select from "./UI/select/Select";
-import Option from "../components/UI/option/Option";
-import useGetOptions from "./hooks/useGetOptions";
+import ElFormContainer from "./UI/containers/ElFormContainer";
+import IconFormContainer from "./UI/containers/IconFormContainer";
+import SelFormContainer from "./UI/containers/SelFormContainer";
 
 
 function RecordingForm({ onBack, ...props }) {
-    const subdivision = useGetOptions("subdivision");
+
+    function func() {
+        alert("Нажал на календарь");
+    };
+
+    function func_1() {
+        alert("Нажал на часы");
+    };
 
     return (
         <Form {...props}>
-            <Container className="groups-elemnts-form">
-                <Label className="label-input">Фамилия</Label>
-                <Input className="input-form" placeholder="Фамилия" type="text"></Input>
-            </Container>
-            <Container className="groups-elemnts-form">
-                <Label className="label-input">Имя</Label>
-                <Input className="input-form" placeholder="Имя" type="text"></Input>
-            </Container>
-            <Container className="groups-elemnts-form">
-                <Label className="label-input">Отчество</Label>
-                <Input className="input-form" placeholder="Отчество" type="text"></Input>
-            </Container>
+            <ElFormContainer textLabel="Фамилия" holderInput="Фамилия" typeInput="text"></ElFormContainer>
+            <ElFormContainer textLabel="Имя" holderInput="Имя" typeInput="text"></ElFormContainer>
+            <ElFormContainer textLabel="Отчество" holderInput="Отчество" typeInput="text"></ElFormContainer>
 
-            <Container className="groups-elemnts-form">
-                <Label className="label-input">Подразделение</Label>
-                <Select required className="subdivision">
-                    <Option className="subdivision-op">Выберите подразделение</Option>
-                    {subdivision}
-                </Select>
-            </Container>
-            <Container className="groups-elemnts-form">
-                <Label className="label-input">Должность</Label>
-                <Input className="input-form" placeholder="Должность" type="text"></Input>
-            </Container>
-            <Container className="groups-elemnts-form">
-                {/*
-                    Сделать свой календарь + выбор времени.
-                */}
-                <Label className="label-input">Дата</Label>
-                <Input className="input-form" placeholder="дд.мм.гггг" type="date" readOnly></Input>
-            </Container>
-            <Container className="groups-elemnts-form">
-                <Label className="label-input">Время</Label>
-                <Input className="input-form" placeholder="чч.чч" type="time" readOnly></Input>
-            </Container>
+            <SelFormContainer textLabel="Подразделение" textOption="Выберите подразделение"></SelFormContainer>
+
+            <ElFormContainer textLabel="Должность" holderInput="Должность" typeInput="text"></ElFormContainer>
+
+            <IconFormContainer textLabel="Дата" holderInput="дд.мм.гггг" typeInput="text" onclick={func}></IconFormContainer>
+            <IconFormContainer textLabel="Время" holderInput="чч.мм" typeInput="text" onclick={func_1}></IconFormContainer>
+
             <Container>
                 <Button className="btn-back btn" onClick={onBack}>Назад</Button>
                 <Button className="btn-back btn">Записаться</Button>

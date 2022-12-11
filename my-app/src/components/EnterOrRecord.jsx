@@ -1,4 +1,4 @@
-import Container from "./UI/container/Container";
+import Container from "./UI/containers/Container";
 import Button from "./UI/button/button"
 
 function EnterOrRecord({ onEntries, onRecording, ...props }) {

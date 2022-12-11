@@ -1,6 +1,6 @@
 import Bar from "../components/Bar";
 import ChoiseForms from "../components/ChoiseForms";
-import Container from "../components/UI/container/Container";
+import Container from "../components/UI/containers/Container";
 import "../styles/App.css";
 
 function Home() {

@@ -1,4 +1,4 @@
-import Container from "../components/UI/container/Container";
+import Container from "../components/UI/containers/Container";
 import Bar from "../components/Bar";
 
 function Admin() {

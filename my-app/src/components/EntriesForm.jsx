@@ -1,4 +1,4 @@
-import Container from "./UI/container/Container";
+import Container from "./UI/containers/Container";
 import Form from "./UI/form/Form";
 import Input from "./UI/input/Input";
 import Button from "./UI/button/button";

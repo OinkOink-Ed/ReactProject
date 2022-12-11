@@ -4,6 +4,7 @@
     border-radius: 0.4rem;
     border: none;
     outline: none;
+    height: 3em;
 }
 
 .subdivision:focus{

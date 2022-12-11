@@ -1,5 +1,5 @@
 import createCssClasses from '../../functions/createCssClasses';
-import myClasses from "../container/container.module.css";
+import myClasses from "../containers/container.module.css";
 
 function Container({ children, className, ...props }) {
     return (

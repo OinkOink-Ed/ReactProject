@@ -2,7 +2,7 @@ import EnterOrRecord from "./EnterOrRecord";
 import EntriesForm from "./EntriesForm"
 import RecordingForm from "./RecordingForm";
 import { useState } from "react";
-import Container from "./UI/container/Container";
+import Container from "./UI/containers/Container";
 
 function ChoiseForms() {
     const [functionalBody, SetfunctionalBody] = useState({
