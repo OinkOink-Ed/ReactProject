@@ -26,8 +26,8 @@ function RecordingForm({ onBack, ...props }) {
 
             <ElFormContainer textLabel="Должность" holderInput="Должность" typeInput="text"></ElFormContainer>
 
-            <IconFormContainer textLabel="Дата" holderInput="дд.мм.гггг" typeInput="text" onclick={func}></IconFormContainer>
-            <IconFormContainer textLabel="Время" holderInput="чч.мм" typeInput="text" onclick={func_1}></IconFormContainer>
+            <IconFormContainer textLabel="Дата" holderInput="дд.мм.гггг" typeInput="text" onclick={func} src="./icons/calendar.png"></IconFormContainer>
+            <IconFormContainer textLabel="Время" holderInput="чч.мм" typeInput="text" onclick={func_1} src="./icons/clock.png"></IconFormContainer>
 
             <Container>
                 <Button className="btn-back btn" onClick={onBack}>Назад</Button>
