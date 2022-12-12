@@ -17,7 +17,7 @@ function useGetOptions(name) {
                     "name": name,
                 }),
             });
-            const lists = result.map((element) => <Option key={element.id} value={element.name}>{element.name}</Option>);
+            const lists = result.map((element) => <Option key={element.id} name={element.name} value={element.name}>{element.name}</Option>);
             SetResult(lists);
         };
         fetchData();
