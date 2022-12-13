@@ -4,26 +4,12 @@ import Button from "./UI/button/button";
 import ElFormContainer from "./UI/containers/ElFormContainer";
 import IconFormContainer from "./UI/containers/IconFormContainer";
 import SelFormContainer from "./UI/containers/SelFormContainer";
-import { useState } from "react";
+import useCreateDataForm from "./hooks/useCreateDataForm";
+import useGetOptions from "./hooks/useGetOptions";
 
 
 function RecordingForm({ onBack, ...props }) {
-    const [dataForm, setDataForm] = useState({
-        // surname: "",
-        // name: "",
-        // patronymic: "",
-        // subdivision: "",
-        // post: "",
-        // date: "13.12.2022",
-        // time: "13:00",
-    });
-
-    function createFormData(value, id) {
-        setDataForm({ ...dataForm, [id]: value });
-    };
-
-    console.log(dataForm);
-
+    const [dataForm, createFormData] = useCreateDataForm();
     // function func() {
     //     alert("Нажал на календарь");
     // };
@@ -33,12 +19,13 @@ function RecordingForm({ onBack, ...props }) {
     // };
 
     return (
+
         <Form {...props} id="Recording">
             <ElFormContainer
                 placeholder="Фамилия"
                 type="text"
                 name="surname"
-                value={dataForm.surname ? dataForm.surname : ""}
+                value={dataForm.surname}
                 onChange={createFormData}>
                 Фамилия
             </ElFormContainer>
@@ -47,7 +34,7 @@ function RecordingForm({ onBack, ...props }) {
                 placeholder="Имя"
                 type="text"
                 name="name"
-                value={dataForm.name ? dataForm.name : ""}
+                value={dataForm.name}
                 onChange={createFormData}>
                 Имя
             </ElFormContainer>
@@ -56,7 +43,7 @@ function RecordingForm({ onBack, ...props }) {
                 placeholder="Отчество"
                 type="text"
                 name="patronymic"
-                value={dataForm.patronymic ? dataForm.patronymic : ""}
+                value={dataForm.patronymic}
                 onChange={createFormData}>
                 Отчество
             </ElFormContainer>
@@ -65,7 +52,8 @@ function RecordingForm({ onBack, ...props }) {
                 textOption="Выберите подразделение"
                 name="subdivision"
                 required
-                value={dataForm.subdivision ? dataForm.subdivision : ""}
+                hook={useGetOptions}
+                value={dataForm.subdivision}
                 onChange={createFormData}>
                 Подразделение
             </SelFormContainer>
@@ -74,7 +62,7 @@ function RecordingForm({ onBack, ...props }) {
                 placeholder="Должность"
                 type="text"
                 name="post"
-                value={dataForm.post ? dataForm.post : ""}
+                value={dataForm.post}
                 onChange={createFormData}>
                 Должность
             </ElFormContainer>
@@ -83,6 +71,7 @@ function RecordingForm({ onBack, ...props }) {
                 src="./icons/calendar.png"
                 placeholder="дд.мм.гггг"
                 type="text"
+                onChange={createFormData}
                 // onclick={func}
                 name="date"
                 value={dataForm.date ? dataForm.date : "12.12.2022"}>
@@ -93,6 +82,7 @@ function RecordingForm({ onBack, ...props }) {
                 src="./icons/clock.png"
                 placeholder="чч.мм"
                 type="text"
+                onChange={createFormData}
                 // onclick={func_1}
                 name="time"
                 value={dataForm.time ? dataForm.time : "12:00"}>
