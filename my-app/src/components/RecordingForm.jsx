@@ -50,14 +50,10 @@ function RecordingForm({ onBack, ...props }) {
                 Должность
             </InputFormContainer>
 
-            <IconFormContainer
-                src="./icons/calendar.png"
-                placeholder="дд.мм.гггг"
-                type="text"
+            <IconFormContainer src="./icons/calendar.png" placeholder="дд.мм.гггг" name="date" type="text"
                 onChange={createFormData}
                 // onclick={func}
-                name="date"
-                value={dataForm.date ? dataForm.date : "12.12.2022"}>
+                value={dataForm.date}>
                 Дата
             </IconFormContainer>
 
