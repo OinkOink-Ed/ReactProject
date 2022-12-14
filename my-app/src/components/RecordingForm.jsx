@@ -17,6 +17,8 @@ function RecordingForm({ onBack, ...props }) {
     //     alert("Нажал на часы");
     // };
 
+    console.log(dataForm);
+
     return (
         <Form {...props} id="Recording">
             <InputFormContainer placeholder="Фамилия" name="surname" type="text"
@@ -46,7 +48,7 @@ function RecordingForm({ onBack, ...props }) {
 
             <InputFormContainer placeholder="Должность" name="post" type="text"
                 value={dataForm.post}
-                onChange={createFormData}>
+                lissentChange={createFormData}>
                 Должность
             </InputFormContainer>
 
