@@ -1,9 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import Container from "./UI/containers/Container";
 import Form from "./UI/form/Form";
 import Button from "./UI/button/button";
-import ElFormContainer from "../components/UI/containers/ElFormContainer";
+import InputFormContainer from "./UI/containers/InputFormContainer";
 import useCreateDataForm from "./hooks/useCreateDataForm";
-import { useNavigate } from 'react-router-dom';
 
 function EntriesForm({ onBack, ...props }) {
     const [dataForm, createFormData] = useCreateDataForm();
@@ -17,23 +17,17 @@ function EntriesForm({ onBack, ...props }) {
 
     return (
         <Form {...props}>
-            <ElFormContainer
-                placeholder="Логин"
-                type="text"
-                name="login"
+            <InputFormContainer placeholder="Логин" name="login" type="text"
                 onChange={createFormData}
-                value={dataForm.login ? dataForm.login : ""}>
+                value={dataForm.login}>
                 Введите Логин
-            </ElFormContainer>
+            </InputFormContainer>
 
-            <ElFormContainer
-                placeholder="Пароль"
-                type="password"
-                name="password"
+            <InputFormContainer placeholder="Пароль" name="password" type="password"
                 onChange={createFormData}
-                value={dataForm.password ? dataForm.password : ""}>
+                value={dataForm.password}>
                 Введите Пароль
-            </ElFormContainer>
+            </InputFormContainer>
 
             <Container className="groups-btn-form">
                 <Button className="btn-back btn"

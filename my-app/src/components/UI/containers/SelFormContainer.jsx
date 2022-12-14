@@ -1,23 +1,19 @@
-import Container from "./Container";
-import Label from "../label/Label";
-import Option from "../option/Option";
 import Select from "../select/Select";
+import GenFormElemConteiner from "./GenFormElemConteiner";
 
-function SelFormContainer({ children, textOption, value, onChange, hook, ...props }) {
-    const data = hook(props.name);
+function SelFormContainer({ children, textOption, value, onChange, hook, name, ...props }) {
+    const data = hook("subdivision");
 
     function handlerChange(e) {
         onChange(e.target.value, e.target.name);
     };
 
     return (
-        <Container className="groups-elemnts-form">
-            <Label className="label-input">{children}</Label>
-            <Select {...props} className="subdivision" value={value ? value : ""} onChange={handlerChange}>
-                <Option className="subdivision-op">{textOption}</Option>
+        <GenFormElemConteiner text={children}>
+            <Select {...props} value={value} onChange={handlerChange}>
                 {data}
             </Select>
-        </Container>
+        </GenFormElemConteiner>
     );
 };
 

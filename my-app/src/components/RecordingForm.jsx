@@ -1,12 +1,11 @@
 import Form from "./UI/form/Form";
 import Container from "./UI/containers/Container";
 import Button from "./UI/button/button";
-import ElFormContainer from "./UI/containers/ElFormContainer";
 import IconFormContainer from "./UI/containers/IconFormContainer";
 import SelFormContainer from "./UI/containers/SelFormContainer";
+import InputFormContainer from "./UI/containers/InputFormContainer";
 import useCreateDataForm from "./hooks/useCreateDataForm";
 import useGetOptions from "./hooks/useGetOptions";
-
 
 function RecordingForm({ onBack, ...props }) {
     const [dataForm, createFormData] = useCreateDataForm();
@@ -19,53 +18,37 @@ function RecordingForm({ onBack, ...props }) {
     // };
 
     return (
-
         <Form {...props} id="Recording">
-            <ElFormContainer
-                placeholder="Фамилия"
-                type="text"
-                name="surname"
+            <InputFormContainer placeholder="Фамилия" name="surname" type="text"
                 value={dataForm.surname}
                 onChange={createFormData}>
                 Фамилия
-            </ElFormContainer>
+            </InputFormContainer>
 
-            <ElFormContainer
-                placeholder="Имя"
-                type="text"
-                name="name"
+            <InputFormContainer placeholder="Имя" name="name" type="text"
                 value={dataForm.name}
                 onChange={createFormData}>
                 Имя
-            </ElFormContainer>
+            </InputFormContainer>
 
-            <ElFormContainer
-                placeholder="Отчество"
-                type="text"
-                name="patronymic"
+            <InputFormContainer placeholder="Отчество" name="patronymic" type="text"
                 value={dataForm.patronymic}
                 onChange={createFormData}>
                 Отчество
-            </ElFormContainer>
+            </InputFormContainer>
 
-            <SelFormContainer
-                textOption="Выберите подразделение"
-                name="subdivision"
-                required
+            <SelFormContainer className="subdivision" name="subdivision"
                 hook={useGetOptions}
                 value={dataForm.subdivision}
                 onChange={createFormData}>
                 Подразделение
             </SelFormContainer>
 
-            <ElFormContainer
-                placeholder="Должность"
-                type="text"
-                name="post"
+            <InputFormContainer placeholder="Должность" name="post" type="text"
                 value={dataForm.post}
                 onChange={createFormData}>
                 Должность
-            </ElFormContainer>
+            </InputFormContainer>
 
             <IconFormContainer
                 src="./icons/calendar.png"
