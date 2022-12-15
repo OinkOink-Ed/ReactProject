@@ -1,9 +1,9 @@
 import GenFormElemConteiner from "./GenFormElemConteiner";
 import Input from "../input/Input";
 
-function InputFormContainer({ value, onChange, children, ...props }) {
+function InputFormContainer({ value, lissentChange, children, ...props }) {
     function handlerChange(e) {
-        onChange(e.target.value, e.target.name);
+        lissentChange(e.target.value, e.target.name);
     };
 
     return (

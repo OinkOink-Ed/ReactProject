@@ -1,11 +1,11 @@
 import Select from "../select/Select";
 import GenFormElemConteiner from "./GenFormElemConteiner";
 
-function SelFormContainer({ children, textOption, value, onChange, hook, name, ...props }) {
+function SelFormContainer({ children, textOption, value, lissentChange, hook, name, ...props }) {
     const data = hook("subdivision");
 
     function handlerChange(e) {
-        onChange(e.target.value, e.target.name);
+        lissentChange(e.target.value, e.target.name);
     };
 
     return (

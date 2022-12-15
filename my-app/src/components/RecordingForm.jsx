@@ -9,40 +9,31 @@ import useGetOptions from "./hooks/useGetOptions";
 
 function RecordingForm({ onBack, ...props }) {
     const [dataForm, createFormData] = useCreateDataForm();
-    // function func() {
-    //     alert("Нажал на календарь");
-    // };
-
-    // function func_1() {
-    //     alert("Нажал на часы");
-    // };
-
-    console.log(dataForm);
 
     return (
         <Form {...props} id="Recording">
             <InputFormContainer placeholder="Фамилия" name="surname" type="text"
                 value={dataForm.surname}
-                onChange={createFormData}>
+                lissentChange={createFormData}>
                 Фамилия
             </InputFormContainer>
 
             <InputFormContainer placeholder="Имя" name="name" type="text"
                 value={dataForm.name}
-                onChange={createFormData}>
+                lissentChange={createFormData}>
                 Имя
             </InputFormContainer>
 
             <InputFormContainer placeholder="Отчество" name="patronymic" type="text"
                 value={dataForm.patronymic}
-                onChange={createFormData}>
+                lissentChange={createFormData}>
                 Отчество
             </InputFormContainer>
 
             <SelFormContainer className="subdivision" name="subdivision"
                 hook={useGetOptions}
                 value={dataForm.subdivision}
-                onChange={createFormData}>
+                lissentChange={createFormData}>
                 Подразделение
             </SelFormContainer>
 
@@ -53,19 +44,13 @@ function RecordingForm({ onBack, ...props }) {
             </InputFormContainer>
 
             <IconFormContainer src="./icons/calendar.png" placeholder="дд.мм.гггг" name="date" type="text"
-                onChange={createFormData}
-                // onclick={func}
+                lissentChange={createFormData}
                 value={dataForm.date}>
                 Дата
             </IconFormContainer>
 
-            <IconFormContainer
-                src="./icons/clock.png"
-                placeholder="чч.мм"
-                type="text"
-                onChange={createFormData}
-                // onclick={func_1}
-                name="time"
+            <IconFormContainer src="./icons/clock.png" placeholder="чч.мм" name="time" type="text"
+                lissentChange={createFormData}
                 value={dataForm.time ? dataForm.time : "12:00"}>
                 Время
             </IconFormContainer>
