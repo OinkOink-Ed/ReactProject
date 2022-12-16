@@ -8,17 +8,17 @@ function useGetOptions(name) {
 
     useMemo(() => {
         const fetchData = async () => {
-            const result = await queryRequest({
-                method: "POST",
-                headers: {
-                    "Content-type": "text/plain"
-                },
-                body: JSON.stringify({
-                    "name": name,
-                }),
+            const result = await queryRequest(`http://oinkoink?name=${name}`, {
             });
-            const lists = result.map((element) => <Option key={element.id} name={element.name} value={element.name}>{element.name}</Option>);
-            SetResult(lists);
+
+            //Подумать над обработкой ошибок исходя из кода статуса
+
+            if (result === 500) {
+                SetResult(null);
+            } else {
+                const lists = result.map((element) => <Option key={element.id} name={element.name} value={element.name}>{element.name}</Option>);
+                SetResult(lists);
+            }
         };
         fetchData();
     }, [name]);

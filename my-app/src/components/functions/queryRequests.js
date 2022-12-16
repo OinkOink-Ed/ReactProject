@@ -1,6 +1,6 @@
-async function queryRequest(parameters) {
+async function queryRequest(url, parameters) {
 
-    let response = await fetch("http://oinkoink", parameters);
+    let response = await fetch(url, parameters);
 
     if (response.ok) {
         let data = await response.json();
