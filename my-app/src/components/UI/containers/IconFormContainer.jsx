@@ -1,9 +1,9 @@
 import Container from './Container';
 import Input from "../input/Input";
-// import Label from '../label/Label';
 import IconsConteiner from './IconsConteiner';
 import { useState } from 'react';
 import GenFormElemConteiner from './GenFormElemConteiner';
+import Shedules from '../../Shedules';
 
 function IconFormContainer({ children, onclick, src, value, lissentChange, ...props }) {
     const [component, SetComponent] = useState(false);
@@ -18,15 +18,17 @@ function IconFormContainer({ children, onclick, src, value, lissentChange, ...pr
 
     function onHandlerClick(e) {
         e.preventDefault();
-        SetComponent(!component);
+        SetComponent(true);
     };
+
+    console.log(component);
 
     return (
         <GenFormElemConteiner text={children}>
             <Container className="groups-input-icons">
                 <Input className="custom-input-icons" {...props} value={data ? data : ""} onChange={change}></Input>
-                <IconsConteiner src={src} name={props.name} handlerClick={onHandlerClick}></IconsConteiner>
-                {component && <Container name={props.name}>АХАХАХАХАХХА</Container>}
+                <IconsConteiner src={src} name={props.name} clickOnChange={onHandlerClick}></IconsConteiner>
+                {component && <Shedules name={props.name} lissentChange={change}>АХАХАХАХАХХА</Shedules>}
             </Container>
         </GenFormElemConteiner >
     );
