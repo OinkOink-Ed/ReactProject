@@ -1,3 +1,6 @@
+//Функция была вынесена отдельно для переиспользования
+//Принимает url сервера и параметры запроса
+
 async function queryRequest(url, parameters) {
 
     let response = await fetch(url, parameters);

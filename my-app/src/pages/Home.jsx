@@ -3,6 +3,8 @@ import ChoiseForms from "../components/ChoiseForms";
 import Container from "../components/UI/containers/Container";
 import "../styles/App.css";
 
+//Домашняя страница для выбора записи или входа в Админку
+
 function Home() {
     return (
         <Container className="app-body">

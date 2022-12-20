@@ -1,6 +1,8 @@
 import Container from "../components/UI/containers/Container";
 import Bar from "../components/Bar";
 
+//Страница Админки Ещё не реализована
+
 function Admin() {
     return (
         <Container className="app-body">
