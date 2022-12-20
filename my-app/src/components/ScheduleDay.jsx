@@ -1,13 +1,16 @@
 import Container from "./UI/containers/Container";
 import useGetSheduleDay from "./hooks/useGetSheduleDay";
 
-function SheduleDay(props) {
+function SheduleDay({ lissentChange, ...props }) {
     const data = useGetSheduleDay(props.name);
 
-    console.log(data);
+    function onHandlerClick(e) {
+        e.preventDefault();
+        lissentChange(e.target.value, e.target.name);
+    };
 
     return (
-        <Container {...props}></Container>
+        <Container {...props} onClick={onHandlerClick}>{data}</Container>
     );
 };
 

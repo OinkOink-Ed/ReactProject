@@ -18,7 +18,7 @@ function useGetSheduleTime(name) {
             if (result === 500) {
                 SetResult(null);
             } else {
-                const lists = result.map((element) => <Button value={element.name}>{element.name}</Button>);
+                const lists = result.map((element) => <Button key={element[name]} name={element[name]}>{element[name]}</Button>);
                 SetResult(lists);
             }
         };
