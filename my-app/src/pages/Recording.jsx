@@ -1,11 +1,11 @@
 import Bar from "../components/Bar";
-import EnterOrRecord from "../components/EnterOrRecord";
+import RecordingForm from "../components/RecordingForm";
 import Container from "../components/UI/containers/Container";
 import "../styles/App.css";
 
-//Домашняя страница для выбора записи или входа в Админку
+//Страница для записи на обучение
 
-function Home() {
+function Recording() {
     return (
         <Container className="app-body">
             <Bar
@@ -13,7 +13,7 @@ function Home() {
                 ГБУЗ "ГП №1 г.Сочи" МЗ КК Запись на обучение
             </Bar>
             <Container className="body-container">
-                <EnterOrRecord className="groups-btn" />
+                <RecordingForm className="form" />
             </Container>
             <Bar className="footer-bar bar">
                 По вопросам и предложениям по улучшению обращаться по номеру: 8-952-836-06-42
@@ -22,4 +22,4 @@ function Home() {
     );
 };
 
-export default Home;
+export default Recording;

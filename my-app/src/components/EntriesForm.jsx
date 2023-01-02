@@ -15,6 +15,11 @@ function EntriesForm({ onBack, ...props }) {
         navigate("/admin");
     };
 
+    function home(e) {
+        e.preventDefault();
+        navigate("/");
+    };
+
     return (
         <Form {...props}>
             <InputFormContainer placeholder="Логин" name="login" type="text"
@@ -30,9 +35,7 @@ function EntriesForm({ onBack, ...props }) {
             </InputFormContainer>
 
             <Container className="groups-btn-form">
-                <Button className="btn-back btn"
-                    onClick={onBack}>
-                    Назад</Button>
+                <Button className="btn-back btn" onClick={home}>Назад</Button>
                 <Button className="btn-entries btn" onClick={entries}>Войти</Button>
             </Container>
         </Form>

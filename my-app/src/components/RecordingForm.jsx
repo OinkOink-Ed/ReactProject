@@ -6,9 +6,17 @@ import SelFormContainer from "./UI/containers/SelFormContainer";
 import InputFormContainer from "./UI/containers/InputFormContainer";
 import useCreateDataForm from "./hooks/useCreateDataForm";
 import useGetOptions from "./hooks/useGetOptions";
+import { useNavigate } from "react-router-dom";
 
-function RecordingForm({ onBack, ...props }) {
+function RecordingForm(props) {
     const [dataForm, createFormData] = useCreateDataForm();
+
+    const navigate = useNavigate();
+
+    function home(e) {
+        e.preventDefault();
+        navigate("/");
+    };
 
     return (
         <Form {...props} id="Recording">
@@ -56,7 +64,7 @@ function RecordingForm({ onBack, ...props }) {
             </IconFormContainer>
 
             <Container>
-                <Button className="btn-back btn" onClick={onBack}>Назад</Button>
+                <Button className="btn-back btn" onClick={home}>Назад</Button>
                 <Button className="btn-back btn">Записаться</Button>
             </Container>
         </Form >
