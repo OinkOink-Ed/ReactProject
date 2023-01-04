@@ -3,7 +3,7 @@ import EntriesForm from "../components/EntriesForm";
 import Container from "../components/UI/containers/Container";
 import "../styles/App.css";
 
-//Страница для записи на обучение
+//Страница для входа в Админку
 
 function Authorization() {
     return (

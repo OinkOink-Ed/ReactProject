@@ -1,3 +1,5 @@
+// для чего-то создал, может пригодится
+
 function getDateNow() {
     let date = new Date();
 
