@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+// формируем данные формы для отправки на сервер
+
 function useCreateDataForm() {
     const [dataForm, setDataForm] = useState({});
 
